@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/Formulario.css}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <title>Perfil do Paciente</title>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+    <img src="/img/1.png" alt="Logo">
+</div>
+
+    <div
+            class="nome">FORMULÁRIO DE SOLICITAÇÃO
+    </div>
+
+    <div>
+        <button onclick="history.back()" class="btn-voltar">Voltar</button>
+    </div>
+
+</header>
+
+<div class="card" >
+    <h2>Perfil do Paciente</h2>
+
+
+    <form id="pacienteForm" th:action="@{/criarSolicitacao}"  method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required placeholder="Nome Completo do Paciente">
+
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpfVisivel" required placeholder="CPF do Paciente" maxlength="14" oninput="mascaraCPF(this)" onblur="validarCPF(this)">
+        <input type="hidden" id="cpfHidden" name="cpf"> <!-- Campo sem máscara que será enviado ao backend -->
+        <small id="cpfErro" style="color: red; display: none;">CPF inválido</small>
+
+
+        <label for="dataNascimento">Data de Nascimento:</label>
+        <input type="date" id="dataNascimento" name="dataNascimento" required>
+        <span class="error-message"></span>
+
+        <label for="ultimaConsulta">Data da Última Consulta:</label>
+        <input  type="date" id="ultimaConsulta" name="ultimaConsulta" required >
+        <span class="error-message"></span>
+
+        <label for="descricaoSolicitacao">Descreva a Solicitação:</label>
+        <textarea id="descricaoSolicitacao" name="descricaoSolicitacao" rows="4" placeholder="Descreva com detalhes sua solicitação..."></textarea>
+
+
+                       <!-- CHECKBOX FINANCEIRO -->
+
+        <div id="financiero" >
+            <label class="checkbox-label" for="f-notadetalhada">
+                <input type="checkbox" id="f-notadetalhada" name="financeiro" />
+                <span class="checkbox-custom"></span>
+                Nota detalhada
+            </label>
+
+            <div class="checkboxes">
+                <label class="checkbox-label" for="f-notaFiscal">
+                    <input type="checkbox" id="f-notaFiscal" name="notaFiscal" />
+                    <span class="checkbox-custom"></span>
+                    Nota fiscal
+                </label>
+
+                <label class="checkbox-label" for="f-Devolucao">
+                    <input type="checkbox" id="f-Devolucao" name="devolucao"  />
+                    <span class="checkbox-custom"></span>
+                    Devolução
+                </label>
+            </div>
+        </div>
+                     <!--    CHECKBOX AMBULATORIO        -->
+            <div id="ambulatorio" >
+                <label class="checkbox-label" for="a-receita" id="a-receita2">
+                    <input type="checkbox" id="a-receita" name="receita"  />
+                    <span class="checkbox-custom"></span>
+                    Receita de oculos
+                </label>
+
+                <label class="checkbox-label" for="a-relatorio">
+                    <input type="checkbox" id="a-relatorio" name="checkbox3" />
+                    <span class="checkbox-custom"></span>
+                    Relatório médico
+                </label>
+
+                <label class="checkbox-label" for="a-pedido">
+                    <input type="checkbox" id="a-pedido" name="checkbox3" />
+                    <span class="checkbox-custom"></span>
+                    Pedido médico
+                </label>
+
+                <label class="checkbox-label" for="a-atestado">
+                    <input type="checkbox" id="a-atestado" name="checkbox3" />
+                    <span class="checkbox-custom"></span>
+                    Atestado médico
+                </label>
+
+                <label class="checkbox-label" for="a-declaracao">
+                    <input type="checkbox" id="a-declaracao" name="checkbox3" />
+                    <span class="checkbox-custom"></span>
+                    Declaração de horas
+                </label>
+            </div>
+
+            <!--    CHECKBOX EXAMES        -->
+
+            <div id="exames">
+                <label class="checkbox-label" for="e-exame">
+                    <input type="checkbox" id="e-exame" name="resultado" />
+                    <span class="checkbox-custom"></span>
+                    Resultado de exames
+                </label>
+            </div>
+  
+        <div class="button-container">
+            <button type="submit">Enviar</button>
+        </div>
+        <input type="hidden" name="setor" id="setor">
+        <span class="error-message" id="checkbox-error"></span>
+    </form>
+</div>
+<script type="text/javascript" src="/js/formulario.js" ></script>
+<script type="text/javascript" src="/js/CpfScript.js" ></script>
+</body>
+<footer>
+
+</footer>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corrigindo o caminho do arquivo CSS -->
+    <link rel="stylesheet" type="text/css" th:href="@{/css/TelaPrincipal.css}">
+    <script type="text/javascript" th:src="@{/js/TelaPrincipal.js}"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/img/1.png" alt="Logo">
+        </div>
+
+        <button class="btn-login" onClick="RedirecionarGerencia()"> ÁREA RESERVADA </button>
+    </header>
+
+      <div class="cards-container">
+        <div class="card">
+            <img src="/img/Financial.png" alt="Imagem do financeiro">
+            <h1>FINANCEIRO</h1>
+            <p>Para solicitar,nota fiscal e nota detalhada.</p>
+            <button onClick="Redirecionar(0)">SOLICITAR</button>
+        </div>
+
+        <div class="card">
+            <img src="img/Out patient Clinic.png" alt="Imagem do ambulatorio">
+            <h1>AMBULATÓRIO</h1>
+            <p>Destinado a todas as solicitações de 2º Via de documentos de consulta e Pronto Socorro.</p>
+            <button onClick="Redirecionar(1)">SOLICITAR</button>
+        </div>
+
+        <div class="card">
+            <img src="img/test.png" alt="Imagem dos exames">
+            <h1>EXAMES</h1>
+            <p>Exames, laudos e imagens.</p>
+            <button onClick="Redirecionar(2)">SOLICITAR</button>
+        </div>
+    </div>
+</body>
+<footer>
+    <a href="/termos">Termo de uso e Política de Privacidade</a> |
+    <a href="/Sobre">Quem Somos</a>
+</footer>
+</html>

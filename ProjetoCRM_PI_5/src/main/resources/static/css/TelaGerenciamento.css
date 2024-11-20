@@ -1,0 +1,110 @@
+/*!* General page layout *!*/
+/*body {*/
+/*    font-family: 'Poppins', sans-serif;*/
+/*    background-color: #f4f7fc;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/*!* Header Styling *!*/
+/*header {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    background-color: #343a40;*/
+/*    color: white;*/
+/*    padding: 20px;*/
+/*}*/
+
+/*header .nome {*/
+/*    font-size: 1.5rem;*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*header .btn-logout {*/
+/*    background-color: #dc3545;*/
+/*    color: white;*/
+/*    padding: 8px 16px;*/
+/*    border: none;*/
+/*    border-radius: 5px;*/
+/*    cursor: pointer;*/
+/*    font-size: 1rem;*/
+/*}*/
+
+/*header .btn-logout:hover {*/
+/*    background-color: #c82333;*/
+/*}*/
+
+/*!* Table Container *!*/
+/*.container-custom {*/
+/*    padding: 20px;*/
+/*}*/
+
+/*.table-container {*/
+/*    max-width: 100%;*/
+/*}*/
+
+/*!* Responsive Table *!*/
+/*.table-responsive {*/
+/*    overflow-x: auto;*/
+/*    -webkit-overflow-scrolling: touch;*/
+/*}*/
+
+/*!* Table Header *!*/
+/*thead {*/
+/*    background-color: #343a40;*/
+/*    color: white;*/
+/*}*/
+
+/*thead th {*/
+/*    font-weight: bold;*/
+/*}*/
+
+/*!* Status Dropdown Styling *!*/
+/*.status-dropdown {*/
+/*    width: 120px;*/
+/*    font-size: 0.9rem;*/
+/*}*/
+
+/*!* Status Color Styling *!*/
+/*.status-dropdown option[value="pending"] {*/
+/*    background-color: #ffc107;*/
+/*    color: white;*/
+/*}*/
+
+/*.status-dropdown option[value="completed"] {*/
+/*    background-color: #28a745;*/
+/*    color: white;*/
+/*}*/
+
+/*.status-dropdown option[value="canceled"] {*/
+/*    background-color: #dc3545;*/
+/*    color: white;*/
+/*}*/
+
+/*!* Status Button Color Change Based on Status *!*/
+/*.status-btn.pending {*/
+/*    background-color: #ffc107;*/
+/*    color: white;*/
+/*}*/
+
+/*.status-btn.completed {*/
+/*    background-color: #28a745;*/
+/*    color: white;*/
+/*}*/
+
+/*.status-btn.canceled {*/
+/*    background-color: #dc3545;*/
+/*    color: white;*/
+/*}*/
+
+/*.status-btn {*/
+/*    padding: 6px 12px;*/
+/*    border-radius: 5px;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*.status-btn:hover {*/
+/*    opacity: 0.8;*/
+/*}*/

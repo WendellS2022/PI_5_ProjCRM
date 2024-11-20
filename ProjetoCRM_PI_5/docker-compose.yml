@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  projeto-crm:
+    image: projetocrm-app
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://host.docker.internal:3306/projeto_crm
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD:
+    networks:
+      - projeto_crm
+
+networks:
+  projeto_crm:
+
+volumes:
+  my-dbdata:
+

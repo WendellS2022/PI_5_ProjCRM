@@ -1,0 +1,215 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ajuste para compatibilidade */
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 9%;
+    padding: 16px 20px;
+    background-color: #035251;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 80px; /* Ajustado para sofisticação */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+header .nome {
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center; /* Centraliza o texto no próprio elemento */
+    flex: 1; /* Permite que o nome ocupe o espaço restante */
+    text-align: center; /* Mantém o texto centralizado horizontalmente */
+}
+
+header .btn-voltar {
+    background-color: #035251;
+    margin-right: 30px;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header .btn-voltar:hover {
+    background-color:#035251;
+}
+
+/* Card centralizado */
+.card {
+    text-align: left;
+    padding: 24px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 370px;
+    background-color: #fff;
+    margin-top: 140px; /* Espaço ajustado para header fixo */
+    animation: fadeIn 0.5s ease;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título do card */
+.card h2 {
+    margin-bottom: 16px;
+    font-size: 22px;
+    color: #035251;
+}
+
+/* Formulário */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #035251;
+    outline: none;
+}
+
+/* Botão com animação */
+.button-container {
+    text-align: center;
+}
+
+button {
+    background-color: #035251;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #067C79;
+    transform: scale(1.05);
+}
+
+/* Checkboxes com design moderno */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    accent-color: #035251; /* Cor personalizada */
+    width: 16px;
+    height: 16px;
+}
+
+/* Mensagem de erro */
+.error-message {
+    color: red;
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 12px 16px;
+    }
+
+    header .logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card {
+        margin-top: 120px;
+        padding: 20px;
+    }
+
+    label, button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        margin-top: 100px;
+        padding: 16px;
+        width: 90%;
+    }
+
+    header .nome {
+        font-size: 20px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+.btn-voltar {
+    margin: 50px;
+    }
+}

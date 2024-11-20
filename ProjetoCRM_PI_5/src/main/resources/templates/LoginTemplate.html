@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/LoginFuncionario.css}">
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<header>
+    <button onclick="history.back()" class="btn-voltar">Voltar</button>
+    <div class="nome"></div>
+</header>
+
+<body>
+<div class="card">
+
+    <h2>Login</h2>
+    <form id="loginForm" th:action="@{/login}"  method="post">
+        <div th:if="${param.error}" class="alert alert-error">
+            Invalid username and password.
+        </div>
+        <div th:if="${param.logout}" class="alert alert-success">
+            You have been logged out.
+        </div>
+        <input type="email" placeholder="Email" name="username" required>
+        <input type="password" placeholder="Senha"  name="password" required>
+        <button type="submit">Entrar</button>
+    </form>
+
+</div>
+
+</body>
+
+<!--<script>-->
+<!--    document.getElementById('loginForm').addEventListener('submit', function(e) {-->
+<!--        e.preventDefault();-->
+
+<!--        const formData = {-->
+<!--            username : document.getElementById("username").value,-->
+<!--            password : document.getElementById("password").value,-->
+<!--            _csrf : document.getElementById("_csrf").value-->
+<!--        };-->
+
+<!--        fetch('/login', {-->
+<!--            method: 'POST',-->
+<!--            headers: {-->
+<!--                'Content-Type': 'application/json',-->
+<!--            },-->
+<!--            body: JSON.stringify(formData),-->
+<!--        })-->
+<!--            .then(response => response.json())-->
+<!--            .then(data => console.log(data))-->
+<!--            .catch((error) => console.error('Error:', error));-->
+<!--    });-->
+<!--</script>-->
+
+</html>

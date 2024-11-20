@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/Protocolo.css}">
+    <script src="script.js" th:src="@{/js/Protocolo.js}"></script>
+
+    <meta charset="UTF-8">
+    <title>Protoclo</title>
+</head>
+
+<header>
+    <div class="nome">Protocolo</div>
+</header>
+
+<body>
+<h1>SOLICITAÇÃO ENVIADA COM SUCESSO!</h1>
+<p id="protocolo">Seu Protocolo é: <span th:text="${protocolo}"></span></p>
+
+<label>Para Receber o Protocolo Por E-mail, insira abaixo:</label>
+<form th:action="@{/SendEmail}" method="post" onsubmit="mostrarMensagem()">
+    <input id="Email" type="email" name="email" placeholder="Digite seu e-mail" oninput="verificarEmail()" onblur="aplicarMascaraEmail()"/>
+    <input type="hidden" name="body" th:value="${protocolo}">
+    <div class="button-container">
+        <button type="submit" id="botaoEnviar" disabled>Enviar</button>
+    </div>
+</form>
+<script type="text/javascript" src="/js/EnviarEmail.js"></script>
+
+</body>
+</html>
